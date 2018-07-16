@@ -1,26 +1,12 @@
 import Vue from "vue";
-import App from "./App.vue";
+import App from "./main";
 
 describe("Adder", () => {
   it("has a created hook", () => {
-    expect(typeof App.created).toBe("function");
+    expect(typeof App.add).toBe("function");
   });
-  it("sets the correct default data", () => {
-    expect(typeof App.data).toBe("function");
-    const defaultData = App.data();
-    expect(defaultData.message).toBe("Preparing Vue!");
+  it("should return 5", () => {
+    expect(typeof App.add(2,3)).toBe(5);
   });
 
-  // Inspect the component instance on mount
-  it("correctly sets the message when created", () => {
-    const vm = new Vue(App).$mount();
-    expect(vm.message).toBe("Hello from Vue!");
-  });
-
-  // Mount an instance and inspect the render output
-  it("renders the correct message", () => {
-    const Constructor = Vue.extend(App);
-    const vm = new Constructor().$mount();
-    expect(vm.$el.textContent).toBe("Hello from Vue!");
-  });
 });
