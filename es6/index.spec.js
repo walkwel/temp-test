@@ -9,7 +9,7 @@ describe("Calculation 1", () => {
   });
 });
 describe("Calculation 2", () => {
-  it("knows that multiple(2,3) return 4", () => {
+  it("knows that multiple(2,3) return 6", () => {
     expect(greetings.multiple(2,3)).toBe(6);
   });
   it("knows that divide(6,3) return 2", () => {
